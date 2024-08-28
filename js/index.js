@@ -20,25 +20,14 @@ let statusImage = document.getElementsByClassName("statusImage");
 let textStatusWeather = document.getElementsByClassName("textStatusWeather");
 let minTemp = document.getElementsByClassName("minTemp");
 
-//read data
-// async function getData(index) {
-//   let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=963fc3e6f09d4fdd9bf193302241206&q=${index}&days=3`);
-//   let response = await data.json();
-//   return response;
-// }
-
+// read data
 async function getData(index) {
-  try {
-    let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=963fc3e6f09d4fdd9bf193302241206&q=${index}&days=3`);
-    if (!data.ok) {
-      throw new Error(`HTTP error! status: ${data.status}`);
-    }
-    let response = await data.json();
-    return response;
-  } catch (error) {
-    console.error("Failed to fetch data:", error);
-  }
+  let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=963fc3e6f09d4fdd9bf193302241206&q=${index}&days=3`);
+  let response = await data.json();
+  return response;
 }
+
+
 
 
 async function showData(data) {
