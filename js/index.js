@@ -22,7 +22,7 @@ let minTemp = document.getElementsByClassName("minTemp");
 
 // read data
 async function getData(index) {
-  let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=963fc3e6f09d4fdd9bf193302241206&q=${index}&days=3`);
+  let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=963fc3e6f09d4fdd9bf193302241206&q=${index}&days=3`);
   let response = await data.json();
   return response;
 }
