@@ -113,9 +113,7 @@ color: #10B4DD !important;
 }
 
 @media (max-width:577px){
-    .footer{
-        margin-top: 190%;
-    }
+  
     .col-md-4{
         text-align: center;
     }
